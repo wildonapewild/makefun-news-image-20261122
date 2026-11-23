@@ -1,31 +1,24 @@
-# THE MERIDIAN LINE — Final 4 (@wildonaped) · NI22 Wave 7
+# THE MERIDIAN LINE — news-image-20261122 — Akun Final 4
 
-One-page newspaper for Sunday 22 November 2026: 15 cards + 21 briefs = 36
-stories, 7 regions. Lead trio Ukraine → COP31 → Iran; indigo / cream;
-Layout A (three leads in a row, then 12 minis 4×3).
+Karya gambar berita @wildonaped (Akun Final 4) untuk bounty
+news-image-20261122 di make.fun, disiapkan pada gelombang 7.
 
-## Build
+## Tentang Gelombang 7
 
-- `compose.py` — PIL renderer (W=3900; fonts x1.45 vs G6, structure x~1.3).
-  Renders `variant_A.png` (matrix layout A, matrix palette), `variant_B.png`
-  (alternate layout B, same palette), `variant_C.png` (layout A, ochre accent).
-  Duel in `duel.md`: winner **A (35/40)**.
-- `ni22v7-finish.sh final4 A` — fits winner to `entry.png` (1024×1024),
-  runs margin check with `--fresh ni22-fresh-g7.txt`, writes `preview-300.png`.
-- `main.py` — stdlib-only copy-only carrier with the 1024×1024 dimension gate.
+Sumbernya pool segar Minggu 22 Nov 2026 — 15 kartu ditambah 21 brief,
+pas 36 cerita dari 7 region yang berbeda. Strip angka di kanvas
+memuat 186 / 161 / 35% / $120bn / 720 / 9 / 50. Sebelum dipasang,
+semua bahan melewati DATE CHECK; yang tanggalnya sudah basi masuk
+daftar buangan bernama dan tidak dipakai.
 
-## Gates (verified)
+## Tentang Entry
 
-- entry.png 1024×1024, 219.268 bytes, sha256
-  `f534c12a6a580a58319115b2d72fe40177162b7671197d19374c2fb9a75be68e`
-- margin check 13/13 (fresh G7 pool)
-- render aspect 0,908 (3900×4293)
-- main.py 2× run byte-identical (see verification below)
+- Dimensi: 1024x1024 piksel, sesuai gerbang 1024x1024
+- Ukuran: 219268 byte
+- SHA256: f534c12a6a580a58319115b2d72fe40177162b7671197d19374c2fb9a75be68e
+- Margin checker: 13/13 lulus
 
-## Verify
-
-```
-MAKEFUN_OUTPUT_DIR=/tmp/ni22v7-verify-final4 python3 main.py
-```
-
-Izin Brian (chat utama, 23 Nov 2026): "Ya — bangun G7, bedah Top 1 dulu".
+`main.py` murni pustaka standar. Ia memvalidasi header PNG dan batas
+sisi 1024 piksel, menyalin `entry.png` byte demi byte ke direktori
+keluaran, lalu memastikan salinannya identik melalui sha256 dan
+ukuran berkas.
